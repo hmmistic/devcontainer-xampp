@@ -1,0 +1,28 @@
+{
+    "name": "XAMPP Development Environment",
+    "image": "docker.io/hmmistic/devcontainer-xampp:latest",
+
+    // Uncomment this if you want to use your Dockerfile
+    /*
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    */
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "xdebug.php-debug",
+                "zobo.php-intellisense"
+            ],
+                "settings": {
+                "php.validate.executablePath": "/opt/lampp/bin/php"
+            }   
+        }
+    },
+
+    "forwardPorts": [8080, 3306],
+    "postCreateCommand": "sudo ln -sf /workspaces/${localWorkspaceFolderBasename} /opt/lampp/htdocs/${localWorkspaceFolderBasename}",
+    "postStartCommand": "sudo /opt/lampp/lampp start",
+    "remoteUser": "vscode"
+}
