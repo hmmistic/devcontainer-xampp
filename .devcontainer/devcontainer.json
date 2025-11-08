@@ -1,14 +1,7 @@
 {
     "name": "XAMPP Development Environment",
     "image": "docker.io/hmmistic/devcontainer-xampp:latest",
-
-    // Uncomment this if you want to use your Dockerfile
-    /*
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    */
-
+    
     "customizations": {
         "vscode": {
             "extensions": [
